@@ -15,3 +15,14 @@ We need to create a shared directory and provide required permission to that dir
 mkdir /share
 chmod -R 777 /share
 ```
+
+### Configuring share
+The main configure file is located under /etc/samba. We can open the file using <b><i>vim</i></b> editor and append the following to this file <b><i>/etc/samba/smb.conf</i></b>
+```
+vim /etc/samba/smb.conf
+
+[myshare]
+        comment = My share
+        path = /share
+        read only = No
+```
